@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Cassandra-Tutorial-2</groupId>
+  <artifactId>Cassandra-Tutorial-2</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	</properties>
+  
+  <dependencies>
+   <dependency>
+      <groupId>com.github.stephenc</groupId>
+      <artifactId>jamm</artifactId>
+      <version>0.2.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+    <groupId>org.cassandraunit</groupId>
+    <artifactId>cassandra-unit</artifactId>
+    <version>1.0.3.1</version>
+    <scope>test</scope>
+</dependency>
+    <dependency>
+			<groupId>org.apache.cassandra</groupId>
+			<artifactId>cassandra-all</artifactId>
+			<version>1.0.6</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+    
+    
+  	<dependency>
+			<!-- hector-test cassandra client API -->
+			<groupId>me.prettyprint</groupId>
+			<version>1.0-1</version>
+			<artifactId>hector-test</artifactId>
+			<!-- scope>test</scope-->
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	<dependency>
+      <groupId>me.prettyprint</groupId>
+      <artifactId>hector-core</artifactId>
+      <version>1.0-1</version>
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-log4j12</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+</dependencies>
+  
+  <build>
+  	<plugins>
+  	 <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+            <configuration>
+              <source>1.6</source>
+              <target>1.6</target>
+              <showDeprecation>true</showDeprecation>
+              <showWarnings>true</showWarnings>
+              <verbose>true</verbose>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <showDeprecation>true</showDeprecation>
+          <showWarnings>true</showWarnings>
+          <verbose>true</verbose>
+        </configuration>
+      </plugin>
+  	</plugins>
+  
+  </build>
+  
+</project>
