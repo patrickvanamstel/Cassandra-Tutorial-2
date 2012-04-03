@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Cassandra-Tutorial-2</groupId>
 	<artifactId>Cassandra-Tutorial-2</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>1.0</version>
 
 	<scm>
 		<connection>scm:git:git@github.com:patrickvanamstel/Cassandra-Tutorial-2.git</connection>
